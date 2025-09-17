@@ -1,0 +1,14 @@
+# Godot-specific
+.godot/
+*.import
+export.cfg
+export_presets.cfg
+# C# specific
+.vs/
+.vsconfig
+*.csproj
+*.sln
+*.suo
+*.user
+[Bb]in/
+[Oo]bj/
