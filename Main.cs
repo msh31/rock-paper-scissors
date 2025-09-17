@@ -3,24 +3,39 @@ using System;
 
 public partial class Main : Godot.Node2D 
 {
+	enum Moves { 
+		ROCK, 
+		PAPER, 
+		SCISSORS 
+	};
+	
 	public override void _Ready()  {
 		
 	}
 	
 	public void _on_rock_pressed() {
-		GD.Print("rock");
-		
-		
+		battle(Moves.ROCK);
 	}
 	
 	public void _on_paper_pressed() {
-		GD.Print("paper");
-		
-		
+		battle(Moves.PAPER);
 	}
 	
 	public void _on_scissor_pressed() {
-		GD.Print("scissors");
-		
+		battle(Moves.SCISSORS);
+	}
+	
+	private void battle(Moves playerMove) {
+		switch(playerMove) {
+			case Moves.ROCK:
+				GD.Print("rock");
+			break;
+			case Moves.PAPER:
+				GD.Print("paper");
+			break;
+			case Moves.SCISSORS:
+				GD.Print("scissors");
+			break;
+		}
 	}
 }
